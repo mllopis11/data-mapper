@@ -1,0 +1,12 @@
+source:
+  type: CRE
+  records:
+  - name: REC_FOO_DEMO_CRE
+    condition: $REC_TYPE == 1 && $REC_TYPE == 2
+targets:
+  - type: ME_RT1
+    records:
+    - name: REC_FOO_DEMO_ME_RT1
+      condition: $REC_TYPE == 1
+    - name: REC_FOO_DEMO_ME_RT2
+      condition: $REC_TYPE == 2

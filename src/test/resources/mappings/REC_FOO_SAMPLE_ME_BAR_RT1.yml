@@ -1,0 +1,8 @@
+length: 102
+description: "FOO Sample: record type #1"
+fields:
+  - name: RC_TYPE[1:1]
+    type: INT
+    descr: Record type
+  - name: 
+    
