@@ -12,10 +12,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 
-import mike.data.mapper.core.engine.domain.FieldType;
 import mike.data.mapper.core.engine.domain.FieldValueFactory;
 import mike.data.mapper.core.engine.domain.FieldValues;
 import mike.data.mapper.core.engine.domain.ValueExpression;
+import mike.data.mapper.core.mapping.FieldType;
 
 /**
  * SPeL Date Comparison.
@@ -45,7 +45,7 @@ class FieldValueDateTest {
 	
 	var dateValue = FieldValueFactory.of(FieldType.DATE, "AS_OF_DATE", asOfDate);
 	var dateValues = FieldValues.of(dateValue);
-	var dateExpression = ValueExpression.of("$AS_OF_DATE ge #GV_ASOFDATE", evaluationContext);
+	var dateExpression = ValueExpression.of("$AS_OF_DATE ge #GV_ASOFDATE");
 
 	log.debug("ValueExpressions: {} [fields: {}]", dateExpression.getPreparedExpressions(), dateExpression.getReferencedFields());
 	
@@ -60,7 +60,7 @@ class FieldValueDateTest {
 	
 	var dateValue = FieldValueFactory.of(FieldType.DATE, "AS_OF_DATE", asOfDate);
 	var dateValues = FieldValues.of(dateValue);
-	var dateExpression = ValueExpression.of("$AS_OF_DATE le #GV_ASOFDATE", evaluationContext);
+	var dateExpression = ValueExpression.of("$AS_OF_DATE le #GV_ASOFDATE");
 
 	log.debug("ValueExpressions: {} [fields: {}]", dateExpression.getPreparedExpressions(), dateExpression.getReferencedFields());
 	

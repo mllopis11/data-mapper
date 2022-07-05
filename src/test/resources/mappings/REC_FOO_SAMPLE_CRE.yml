@@ -1,12 +1,18 @@
-source:
-  type: CRE
-  records:
-  - name: REC_FOO_SAMPLE_CRE
-    condition: $REC_TYPE == 1 && $REC_TYPE == 2
-targets:
-  - type: ME_BAR
-    records:
-    - name: REC_FOO_SAMPLE_ME_BAR_RT1
-      condition: $REC_TYPE == 1
-    - name: REC_FOO_SAMPLE_ME_BAR_RT2
-      condition: $REC_TYPE == 2
+description: Foo CRE sample
+length: 35
+fields:
+  - name: REC_TYPE[1:1]
+    type: INT
+  - name: FC_ID[2:10]
+    type: INT
+  - name: FC_MNEMO[12:8]
+  - name: FC_DT_START[20:8]
+    type: DATE(ddMMyyyy)
+  - name: FC_DT_END[28:8]
+    type: DATE(ddMMyyyy)
+    optval: 
+    
+samples:
+   valid: [
+     "1     12345MNE01   25011995        "
+   ]

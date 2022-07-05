@@ -9,10 +9,10 @@ import org.springframework.expression.Expression;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 
-import mike.data.mapper.core.engine.domain.FieldType;
 import mike.data.mapper.core.engine.domain.FieldValue;
 import mike.data.mapper.core.engine.domain.FieldValueFactory;
 import mike.data.mapper.core.engine.domain.FieldValues;
+import mike.data.mapper.core.mapping.FieldType;
 
 @DisplayName("FooValueNumber")
 class FieldValueNumberTest {
@@ -24,7 +24,7 @@ class FieldValueNumberTest {
     @CsvSource({ "0, false", "99, false", "3, false", "300, true", "100, true" })
     void should_return_expected_boolean_when_number_ge_100(String number, boolean expected) {
 	
-	FieldValue fooValue = FieldValueFactory.of(FieldType.NUMBER, "FD_NUMBER", number);
+	FieldValue fooValue = FieldValueFactory.of(FieldType.INT, "FD_NUMBER", number);
 	FieldValues fooValues = FieldValues.of(fooValue);
 	Expression expression = this.compileCondition("ge");
 

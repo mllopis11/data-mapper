@@ -10,6 +10,6 @@
         <appender-ref ref="STDOUT"/>
     </root>
 
-    <logger name="mike.dme" level="DEBUG"/>
-    <logger name="mike.dme.test" level="DEBUG"/>
+    <logger name="mike.data.mapper" level="DEBUG"/>
+    <logger name="mike.test.data.mapper" level="DEBUG"/>
 </configuration>

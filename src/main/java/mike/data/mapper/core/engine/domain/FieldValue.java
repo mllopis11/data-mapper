@@ -1,5 +1,7 @@
 package mike.data.mapper.core.engine.domain;
 
+import mike.data.mapper.core.mapping.FieldType;
+
 public class FieldValue {
 
     private final FieldType type;

@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.springframework.expression.Expression;
-import org.springframework.expression.spel.support.StandardEvaluationContext;
 
 public class ValueExpression {
 
@@ -14,7 +13,7 @@ public class ValueExpression {
     private final List<String> preparedExpressions;
     private final Set<String> referencedFields;
     
-    public static ValueExpression of(String expression, StandardEvaluationContext evaluationContext) {
+    public static ValueExpression of(String expression) {
 	ValueExpressionCompiler expressionCompiler = new ValueExpressionCompiler();
 	List<Expression> expressions = expressionCompiler.compile(expression);
 	return new ValueExpression(expression, expressions, 
