@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import mike.bootstrap.utilities.exceptions.ApplicationException;
-import mike.data.mapper.core.mapping.FieldType;
+import mike.data.mapper.core.mapping.domain.FieldType;
 
 public class FieldValueFactory {
 

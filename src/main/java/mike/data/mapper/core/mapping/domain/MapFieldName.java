@@ -1,4 +1,4 @@
-package mike.data.mapper.core.mapping;
+package mike.data.mapper.core.mapping.domain;
 
 import mike.bootstrap.utilities.helpers.Offset;
 

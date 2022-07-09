@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -26,11 +25,9 @@ class ValueExpressionCompiler {
 
 	this.preparedExpressions = Stream.of(expression.split(";"))
 		.map(expr -> this.prepare(expression, referencedFields))
-		.collect(Collectors.toList());
+		.toList();
 	
-	return this.preparedExpressions.stream()
-			.map(expr -> sep.parseExpression(expr))
-			.collect(Collectors.toList());
+	return this.preparedExpressions.stream().map(sep::parseExpression).toList();
     }
     
     Set<String> getReferencedFields() {
@@ -49,13 +46,11 @@ class ValueExpressionCompiler {
 	    expr = expr.replaceAll("\\" + fd, spelfieldRef);
 	}
 	
-	expr.replaceAll("(?i)@RPAD", "#fctRPad");
-	expr.replaceAll("(?i)@LPAD", "#fctLPad");
-	expr.replaceAll("(?i)@TRIM", "#fctTrim");
-	expr.replaceAll("(?i)@LTRIM", "#fctLTrim");
-	expr.replaceAll("(?i)@RTRIM", "#fctRTrim");
-	
-	return expr;
+	return expr.replaceAll("(?i)@RPAD", "#fctRPad")
+			.replaceAll("(?i)@LPAD", "#fctLPad")
+			.replaceAll("(?i)@TRIM", "#fctTrim")
+			.replaceAll("(?i)@LTRIM", "#fctLTrim")
+			.replaceAll("(?i)@RTRIM", "#fctRTrim");
     }
     
     private Set<String> parseReferencedFields(String expression) {

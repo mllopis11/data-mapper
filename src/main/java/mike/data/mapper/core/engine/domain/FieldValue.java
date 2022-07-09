@@ -1,6 +1,6 @@
 package mike.data.mapper.core.engine.domain;
 
-import mike.data.mapper.core.mapping.FieldType;
+import mike.data.mapper.core.mapping.domain.FieldType;
 
 public class FieldValue {
 

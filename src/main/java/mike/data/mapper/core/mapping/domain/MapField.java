@@ -1,9 +1,8 @@
-package mike.data.mapper.core.mapping;
+package mike.data.mapper.core.mapping.domain;
 
 import javax.validation.constraints.Min;
 
 import mike.bootstrap.utilities.helpers.PreConditions;
-import mike.data.mapper.core.mapping.raw.RawField;
 
 public record MapField(@Min(1) int id, MapFieldName fieldName, MapFieldType fieldType, String description, String optValue) {
 

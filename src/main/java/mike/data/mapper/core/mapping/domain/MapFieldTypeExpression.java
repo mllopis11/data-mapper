@@ -1,4 +1,4 @@
-package mike.data.mapper.core.mapping;
+package mike.data.mapper.core.mapping.domain;
 
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;

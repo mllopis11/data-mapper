@@ -14,8 +14,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 import mike.bootstrap.utilities.exceptions.ApplicationException;
 import mike.bootstrap.utilities.helpers.StringValue;
 import mike.bootstrap.utilities.helpers.Strings;
-import mike.data.mapper.core.mapping.FieldType;
-import mike.data.mapper.core.mapping.MapFieldType;
+import mike.data.mapper.core.mapping.domain.FieldType;
+import mike.data.mapper.core.mapping.domain.MapFieldType;
 
 @DisplayName("MapFieldType")
 class MapFieldTypeTest {

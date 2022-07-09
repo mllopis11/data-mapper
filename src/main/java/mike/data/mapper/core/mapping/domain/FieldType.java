@@ -1,4 +1,4 @@
-package mike.data.mapper.core.mapping;
+package mike.data.mapper.core.mapping.domain;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

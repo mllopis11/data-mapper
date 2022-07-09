@@ -1,4 +1,4 @@
-package mike.data.mapper.core.mapping.raw;
+package mike.data.mapper.core.mapping.domain;
 
 public record RawField(String name, String type, String description, String optValue) {
 

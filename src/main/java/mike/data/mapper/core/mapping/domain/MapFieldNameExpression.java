@@ -1,4 +1,4 @@
-package mike.data.mapper.core.mapping;
+package mike.data.mapper.core.mapping.domain;
 
 import java.util.Optional;
 import java.util.regex.Matcher;

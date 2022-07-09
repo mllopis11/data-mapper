@@ -1,4 +1,4 @@
-package mike.data.mapper.core.mapping;
+package mike.data.mapper.core.mapping.domain;
 
 public record MapFieldType(FieldType type, int scale, String format) {
 

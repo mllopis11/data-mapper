@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import mike.bootstrap.utilities.exceptions.ApplicationException;
 import mike.data.mapper.core.engine.domain.FieldValueFactory;
 import mike.data.mapper.core.engine.domain.FieldValues;
-import mike.data.mapper.core.mapping.FieldType;
+import mike.data.mapper.core.mapping.domain.FieldType;
 
 @DisplayName("FieldValues")
 class FieldValuesTest {

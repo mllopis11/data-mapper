@@ -10,7 +10,7 @@ import org.junit.jupiter.params.provider.NullAndEmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import mike.bootstrap.utilities.exceptions.ApplicationException;
-import mike.data.mapper.core.mapping.MapFieldName;
+import mike.data.mapper.core.mapping.domain.MapFieldName;
 
 @DisplayName("MapFieldName")
 class MapFieldNameTest {

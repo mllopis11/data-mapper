@@ -20,9 +20,8 @@ public class ValueExpression {
 		expressionCompiler.getPreparedExpressions(), expressionCompiler.getReferencedFields());
     }
     
-    private ValueExpression(
-	    String expression,
-	    List<Expression> expressions, List<String> preparedExpressions, Set<String> referencedFields) {
+    private ValueExpression(String expression, List<Expression> expressions, 
+	    List<String> preparedExpressions, Set<String> referencedFields) {
 	this.expression = expression;
 	this.expressions = expressions;
 	this.preparedExpressions = preparedExpressions;
