@@ -12,23 +12,21 @@ public class FieldValueFactory {
     private FieldValueFactory() {}
     
     public static FieldValue of(String name, Object objValue) {
-	FieldType type = FieldType.CHAR;
+
 	var rawValue = objValue != null ? String.valueOf(objValue) : "";
 	
 	if ( objValue instanceof String ) {
-	    type = FieldType.CHAR;
+	    return new FieldValue(FieldType.CHAR, name, rawValue, objValue);
 	} else if ( objValue instanceof LocalDate ) {
-	    type = FieldType.DATE;
+	    return new FieldValue(FieldType.DATE, name, rawValue, objValue);
 	} else if ( objValue instanceof Long || objValue instanceof Integer) {
-	    type = FieldType.NUM;
+	    return new FieldValue(FieldType.NUM, name, rawValue, objValue);
 	} else if ( objValue instanceof Double || objValue instanceof BigDecimal) {
-	    type = FieldType.REAL;
+	    return new FieldValue(FieldType.REAL, name, rawValue, objValue);
 	} else {
 	    String objType = objValue == null ? null : objValue.getClass().getSimpleName();
 	    throw new ApplicationException("Unsupported value type '%s' for field '%s'", objType, name);
-	}
-
-	return new FieldValue(type, name, rawValue, objValue);
+	} 
     }
     
     public static FieldValue of(FieldType type, String name, String rawValue) {
